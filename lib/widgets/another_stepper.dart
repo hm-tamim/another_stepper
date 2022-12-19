@@ -16,6 +16,7 @@ class AnotherStepper extends StatelessWidget {
     this.activeIndex = 0,
     required this.stepperDirection,
     this.inverted = false,
+    this.activeDotColor = Colors.blue,
     this.activeBarColor = Colors.blue,
     this.inActiveBarColor = Colors.grey,
     this.barThickness = 2,
@@ -45,6 +46,8 @@ class AnotherStepper extends StatelessWidget {
 
   /// Bar color for active step
   final Color activeBarColor;
+
+  final Color activeDotColor;
 
   /// Bar color for inactive step
   final Color inActiveBarColor;
@@ -96,6 +99,7 @@ class AnotherStepper extends StatelessWidget {
         isInverted: inverted,
         inActiveBarColor: inActiveBarColor,
         activeBarColor: activeBarColor,
+        activeDotColor: activeDotColor,
         barHeight: barThickness,
         iconHeight: iconHeight,
         iconWidth: iconWidth,
@@ -110,6 +114,7 @@ class AnotherStepper extends StatelessWidget {
         isInverted: inverted,
         inActiveBarColor: inActiveBarColor,
         activeBarColor: activeBarColor,
+        activeDotColor: activeDotColor,
         barWidth: barThickness,
         iconHeight: iconHeight,
         iconWidth: iconWidth,

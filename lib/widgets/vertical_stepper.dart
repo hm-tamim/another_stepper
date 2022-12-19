@@ -14,6 +14,7 @@ class VerticalStepperItem extends StatelessWidget {
       required this.activeIndex,
       required this.isInverted,
       required this.activeBarColor,
+      required this.activeDotColor,
       required this.inActiveBarColor,
       required this.barWidth,
       this.iconHeight,
@@ -40,6 +41,8 @@ class VerticalStepperItem extends StatelessWidget {
 
   /// Bar color for active step
   final Color activeBarColor;
+
+  final Color activeDotColor;
 
   /// Bar color for inactive step
   final Color inActiveBarColor;
@@ -80,6 +83,7 @@ class VerticalStepperItem extends StatelessWidget {
                         index: index,
                         totalLength: totalLength,
                         activeIndex: activeIndex,
+                        activeDotColor: activeDotColor,
                       ),
                 )
               : ColorFiltered(
@@ -92,6 +96,7 @@ class VerticalStepperItem extends StatelessWidget {
                           index: index,
                           totalLength: totalLength,
                           activeIndex: activeIndex,
+                          activeDotColor: activeDotColor,
                         ),
                   ),
                 ),

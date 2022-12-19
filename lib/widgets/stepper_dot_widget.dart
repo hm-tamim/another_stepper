@@ -4,6 +4,7 @@ class StepperDot extends StatelessWidget {
   /// Default stepper dot
   const StepperDot({
     Key? key,
+    required this.activeDotColor,
     required this.index,
     required this.totalLength,
     required this.activeIndex,
@@ -15,12 +16,14 @@ class StepperDot extends StatelessWidget {
   /// Total length of the list provided
   final int totalLength;
 
+  final Color activeDotColor;
+
   /// Active index which needs to be highlighted and before that
   final int activeIndex;
 
   @override
   Widget build(BuildContext context) {
-    final color = (index <= activeIndex) ? Theme.of(context).primaryColor : Colors.grey;
+    final color = (index <= activeIndex) ? activeDotColor : Colors.grey;
     return Container(
       height: 18,
       width: 18,
