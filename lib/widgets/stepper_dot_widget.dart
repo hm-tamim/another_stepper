@@ -20,7 +20,7 @@ class StepperDot extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final color = (index <= activeIndex) ? Colors.blue : Colors.grey;
+    final color = (index <= activeIndex) ? Theme.of(context).primaryColor : Colors.grey;
     return Container(
       height: 18,
       width: 18,
